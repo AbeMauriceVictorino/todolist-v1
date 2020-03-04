@@ -9,10 +9,10 @@ const date = require(__dirname + "/date.js");
 const app = express();
 
 // set an array for the default items in the list
-let items = ["Buy Food", "Prepare Food", "Cook Food", "Eat Food"];
+let items = ["Buy Food", "Prepare Food", "Cook Food", "Eat Food", "Store Food"];
 // set an empty array for new work items
 let workItems = ["Show Up", "Get Settled"];
-let funItems = ["Watch Movie", "Gamble"];
+let funItems = ["Watch Movie", "Gamble", "Watch Tv", "Go Bowling" ];
 
 // set EJS as the viewing engine to display html
 app.set('view engine', 'ejs');
