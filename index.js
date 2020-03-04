@@ -12,7 +12,8 @@ const app = express();
 let items = ["Buy Food", "Prepare Food", "Cook Food", "Eat Food", "Store Food"];
 // set an empty array for new work items
 let workItems = ["Show Up", "Get Settled"];
-let funItems = ["Watch Movie", "Gamble", "Watch Tv", "Go Bowling" ];
+
+let funItems = ["Watch Movies", "Watch Tv", "Gamble", "Play Video Games"]
 
 // set EJS as the viewing engine to display html
 app.set('view engine', 'ejs');
@@ -44,11 +45,14 @@ app.post("/", function(req, res) {
     if (req.body.list === "Work") {
         workItems.push(item);
         res.redirect("/work");
-    }
-    if (req.body.list === "fun") {
-        workItems.push(item);
+     } 
+    
+    else if (req.body.list === "Fun") {
+        funItems.push(item);
         res.redirect("/fun");
-    } else {
+     } 
+
+    else {
         items.push(item);
         res.redirect("/");
     }
